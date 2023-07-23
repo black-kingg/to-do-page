@@ -14,10 +14,34 @@ function getItems(){
         console.log(snapshot);
         let items = [];
         snapshot.docs.forEach(doc => {
-            items.push(doc.data())
+            items.push({
+                id: doc.id,
+                ...doc.data()
+            })
         });
-        console.log(items);
+        generateItems(items);
     })
+}
+
+function generateItems(items){
+
+    let itemHTML = ""; 
+    items.forEach((item) =>{
+        console.log(item);
+        itemHTML += `
+            <div class="todo">
+                <div class="check">
+                    <div class="check_mark">
+                    </div>
+                </div>
+                <div class="new_todo_text">
+                    ${item.text}
+                </div>
+            </div>
+        `
+    })
+
+    document.querySelector(".todo_list").innerHTML = itemHTML;
 }
 
 getItems();
