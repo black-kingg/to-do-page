@@ -3,16 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Turret+Road:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
     <title>To Do App</title>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="title">
-                TODO
+    <div class="light_mode">
+        <nav>
+            <div class="container nav_container">
+                <div class="title">
+                    <h1>TODO</h1>
+                </div>
+                <div class="theme">
+                    <div class="active"><span class="material-symbols-outlined">light_mode</span></div>
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </div>
             </div>
-            <div class="theme"></div>
+        </nav>
+        <div class="container body_container">
+            <div class="left">
+                <ul><li><span class="material-symbols-outlined">widgets</span><a href="#">My To-do list</a></li></ul>
+            </div>
+            <div class="right">
+                <div class="new_todo todo">
+                    <div class="check">
+                        <div class="check_mark">
+                        </div>
+                    </div>
+                    <div class="new_todo_input">
+                        <form onsubmit="addItem(event)">
+                            <input id="todo_input" type="text" placeholder="Create a new todo">
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="empty"></div>
+                <div class="todo_list">
+
+                    <div class="todo">
+                        <div class="check">
+                            <div class="check_mark">
+                            </div>
+                        </div>
+                        <div class="new_todo_text">
+                            cut the loan
+                        </div>
+                    </div>
+
+                    
+
+
+                </div>
+
+
+            </div>
         </div>
     </div>
 
