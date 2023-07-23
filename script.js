@@ -6,5 +6,18 @@ function addItem(event){
         status: "active"
     });
 
-    document.getElementById("todo_input").value = "";
+    text.value = "";
 }
+
+function getItems(){
+    db.collection("todo_items").onSnapshot((snapshot) => {
+        console.log(snapshot);
+        let items = [];
+        snapshot.docs.forEach(doc => {
+            items.push(doc.data())
+        });
+        console.log(items);
+    })
+}
+
+getItems();
