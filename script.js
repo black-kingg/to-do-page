@@ -1,5 +1,10 @@
-function addItem(event) {
+function addItem(event){
     event.preventDefault();
     let text = document.getElementById("todo_input");
-    console.log(text.value);
+    db.collection("todo_items").add({
+        text: text.value,
+        status: "active"
+    });
+
+    document.getElementById("todo_input").value = "";
 }
