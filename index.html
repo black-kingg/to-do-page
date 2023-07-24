@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Turret+Road:wght@200;400&display=swap" rel="stylesheet">
@@ -29,10 +35,6 @@
             </div>
             <div class="right">
                 <div class="new_todo todo">
-                    <div class="check">
-                        <div class="check_mark">
-                        </div>
-                    </div>
                     <div class="new_todo_input">
                         <form onsubmit="addItem(event)">
                             <input id="todo_input" type="text" placeholder="Create a new todo">
@@ -45,28 +47,25 @@
                 <div class="todo_list">
 
                     <div class="todo">
-                        <div class="check">
-                            <div class="check_mark">
-                            </div>
-                        </div>
                         <div class="new_todo_text">
                             cut the loan
                         </div>
+                        <div class="check">
+                            <div class="check_mark">
+                            </div>
+                            <div class="check_right">
+                                <span class="material-symbols-outlined delete">delete</span> 
+                            </div>
+                        </div>
                     </div>
-
                     
-
-
                 </div>
 
 
             </div>
         </div>
     </div>
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+
     <script src="firebase.js"></script>
     <script src="script.js"></script>
     
